@@ -20,7 +20,7 @@ pipeline {
           steps {
                  sh '''#!/bin/bash
                  targets=websvr_18061692;
-                 locate_script='/testdir/work/operate_18061692/script_to_run';
+                 locate_script='/script_dir/18061692/operate_18061692/script_to_run';
                  docker cp $locate_script $targets://$locate_script;
                  bolt script run $locate_script -t $targets -u clientadm -p user123 --no-host-key-check --run-as root;
                  '''
@@ -42,7 +42,7 @@ pipeline {
           steps {
                  sh '''#!/bin/bash
                  targets=websvr_18061692;
-                 locate_script='/testdir/work/operate_18061692/script_to_run';
+                 locate_script='/script_dir/18061692/operate_18061692/script_to_run';
                  docker cp $locate_script $targets://$locate_script;
                  bolt script run $locate_script -t $targets -u clientadm -p user123 --no-host-key-check --run-as root;
                  '''
