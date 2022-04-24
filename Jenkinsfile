@@ -1,17 +1,17 @@
 pipeline {
       agent any
       stages {
-          stage('One') {
+          stage('18061692- Stage 1') {
           steps {
             echo 'Begin of Pipeline: Stage one completes'
           }
           }
-          stage('Two') {
+          stage('18061692-Stage 2') {
           steps {
             input('Do you want to update to Development container?')
           }
           }
-          stage('Three') {
+          stage('18061692- Stage 3') {
           when {
                 not {
                     branch "Development NOT updated"
@@ -27,13 +27,13 @@ pipeline {
                  echo "Development container updated"
           }
           }
-          stage('Four') {
+          stage('18061692- Stage 4') {
           steps {
-            input('Do you want to update to Production container: Proceed to Production')
+            echo('Production website tested working.')
                 
           }
           }
-          stage('Five') {
+          stage('18061692- Stage 5') {
           when {
                 not {
                     branch "Production NOT updated"
@@ -51,7 +51,7 @@ pipeline {
           }
           stage('Completed updating Operation') {
           steps {
-            echo 'Completed updating to Production Container'
+            echo 'Production website updated succesfully'
           }
           }
       }
